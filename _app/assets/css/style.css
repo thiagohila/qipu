@@ -1,0 +1,176 @@
+body{
+	font-family: 'Montserrat', sans-serif !important;
+	color: var(--gray-dark);
+	background-image: linear-gradient(to right, #fce38a , #f38181);
+}
+
+section{
+	padding: 1rem 0;
+}
+
+li:hover{
+	background-color: #efefef;
+}
+
+.title-1{
+	font-size: 2rem;
+	margin-left: 15px;
+	font-weight: 600;
+}
+
+.nav-pills{
+	border:1px solid var(--secondary);
+	border-radius: 0.5rem;
+}
+
+.nav-pills .badge {
+	vertical-align: text-top;
+}
+
+.nav-pills .nav-link{
+	padding: 0.5rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: var(--secondary);
+}
+
+ul.list-group .list-group-item{
+	text-align: left;
+	padding-right: 100px; 
+	position: relative;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+}
+
+ul.list-group .list-group-item .buttons{
+	position: absolute;
+	width: 100px;
+	margin: 5px;
+	text-align: right;
+	top: 0;
+	right: 0;
+}
+
+ul.list-group .list-group-item .buttons .done,
+ul.list-group .list-group-item .buttons .remove {
+	display: inline-block;
+	padding: 0.4em;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.25rem;
+	opacity: 0.8;
+	transition: opacity 1s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	cursor: pointer;
+}
+
+ul.list-group .list-group-item .buttons .done{
+	color: #fff;
+	background-color: #28a745;
+	margin-right: 5px;
+}
+
+ul.list-group#todoList .list-group-item .buttons .done::before{
+	content: "\f00c";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.4rem;
+}
+
+ul.list-group#doneList .list-group-item .buttons .done::before{
+	content: "\f060";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.4rem;
+}
+
+ul.list-group .list-group-item .buttons .done:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #1e7e34;
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+ul.list-group .list-group-item .buttons .remove{
+	color: #fff;
+	background-color: #dc3545;
+}
+
+ul.list-group .list-group-item .buttons .remove::before{
+	content: "\f1f8";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.4rem;
+}
+
+ul.list-group .list-group-item .buttons .remove:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #bd2130;
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+ul.list-group#todoList:empty:after{
+	content:'Nenhuma Tarefa';
+}
+
+ul.list-group#doneList:empty:after {
+	content:'Nenhuma Tarefa Concluída';
+}
+
+ul.list-group#todoList,
+ul.list-group#doneList{
+	min-height: 30px;
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 1rem;
+}
+
+ul.list-group#doneList li{
+	text-decoration: line-through;
+	text-decoration-color: rgba(255, 128, 128, 0.7);
+}
+
+
+/*************Queries*/
+@media (max-width: 576px) {
+	.card-header{
+		padding: .5rem .75rem;
+	}
+	.title-1{
+		font-size: .9rem;
+		margin-left: 10px;
+		
+		position: absolute;
+		top: 18px;
+	}
+	#btnAddTask, #btnClearSearch{
+		width: 100%;
+	}
+	ul.list-group .list-group-item{
+		font-size: 0.9rem;
+	}
+	ul.list-group .list-group-item .buttons{
+		width: 80px;
+	}
+	ul.list-group .list-group-item .buttons .done::before,
+	ul.list-group .list-group-item .buttons .remove::before{
+		font-size: 1.0rem;
+	}
+	.nav-pills .nav-link i{
+		display: block;
+		margin: 0 0 5px 0;
+	}
+}
